@@ -96,8 +96,9 @@ class A{
 			'requestmethod' => 'post',
 			'id' => 1,
 			'method' => $method,
-			'params' => '', //implode(',', $params),
+			'params' => implode(',', $params),
 		));
+		$signature = urldecode($signature);
 
 		if(self::$debug){
 			var_dump($signature);
